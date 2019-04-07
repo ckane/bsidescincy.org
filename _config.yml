@@ -101,7 +101,7 @@ theme_config:
   # Header
   menu:
     Home: /
-    Archives: /archives
+    Archives: /archives/index.html
     About: /about.html
     Contact: /contact.html
 
