@@ -13,6 +13,10 @@ hexo s
 hexo clean
 hexo gen
 
+# You can deploy the static files to a test S3 bucket that you've created or been granted rights on:
+aws s3 sync --delete ./public/ s3://bsidescincy-test/
+# Then, visit http://bsidescincy-test.s3-website.<region>.amazonaws.com/ to test it in the wild
+
 # This deploys the static files to the s3 bucket, using the convention common to AWS S3 web hosting:
 aws s3 sync --delete ./public/ s3://bsidescincy.org/
 ```
