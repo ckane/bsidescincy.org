@@ -1,14 +1,34 @@
 name: bsidescincy-deploy-actions
 run-name: Deployment action run for ${{ github.ref_name }}
 on: [push]
+permissions:
+  id-token: write
+  contents: read
 jobs:
   deploy-site:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout site source
+        uses: actions/checkout@v3
+      - name: Set up Node.js v16
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm install -g hexo
-      - run: npm install
-      - run: npm exec hexo generate
+      - name: Install hexo
+        run: npm install -g hexo
+      - name: Install dependencies for website
+        run: npm install
+      - name: Generate static site files in public/
+        run: npm exec hexo generate
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_BSIDES_ROLE_ARN }}
+          role-session-name: GithubDeploy_${{ github.ref_name }}
+          aws-region: us-east-2
+      - name: Deploying to staging bucket
+        if: github.ref_name == 'main'
+        run: aws s3 sync ./public/ s3://${{ secrets.AWS_BSIDES_STAGING_BUCKET }}/
+      - name: Deploying to prod bucket
+        if: github.ref_name == 'prod'
+        run: aws s3 sync ./public/ s3://${{ secrets.AWS_BSIDES_PROD_BUCKET }}/
