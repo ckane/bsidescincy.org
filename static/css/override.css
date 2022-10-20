@@ -1,11 +1,12 @@
-/* .site-hero {
-    filter: brightness(55%);
-} */
+.site-hero-content h6 {
+    color: #FFF;
+}
 
-/* section.site-hero:after { 
-    content:''; 
-    background:rgba(0,0,0,.5);
-    height: 100%;
-    width: 100%;
-    position: absolute; 
-} */
+.site-hero-content h1 {
+    color: #FFF;
+}
+
+.site-footer img {
+    height: 100px;
+    width: auto;
+}

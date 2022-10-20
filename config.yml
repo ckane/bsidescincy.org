@@ -8,25 +8,32 @@ menu:
     - name: Home
       url: ''
       weight: 1
+    - name: Register
+      url: register
+      weight: 2
+    - name: Sponsors
+      url: sponsors
+      weight: 3
+    - name: Archives
+      url: archives
+      weight: 4
+    - name: Announcements
+      url: announcements
+      weight: 5
     - name: About
       url: about
-      weight: 2
-    - name: Portfolio
-      url: portfolio
-      weight: 3
-    - name: Blog
-      url: blog
-      weight: 4
+      weight: 6
     - name: Get in touch
       url: contact
-      weight: 5
+      weight: 7
 params:
-  logo: images/logo.png
+  logo: 'images/bsideslogo.png'
+  footerLogo: 'images/bsideslogo.png'
   dateFormat: 26 FEB 1994
-  description: Roxo Hugo themes | Design Agency Template by StaticMania
+  description: BSides Cincinnati
   custom_css: 
     - "css/override.css"
-  author: StaticMania
+  author: Ezra Buckingham
   googleAnalitycsID: Your ID
   fabform: 'https://fabform.io/f/USAg2Jl'
   contactForm:
@@ -43,16 +50,16 @@ params:
         title: Web Design
   navAction:
     status: true
-    name: Get in touch
+    name: Contact Us
     url: contact
   banner:
     enable: true
     background_image: images/backgrounds/hero-background.jpeg
-    heading: We’re a Design Studio That Belies In the Great Ideas
-    tagline: 'WE WORK HARD, WE PLAY HARD'
-    primary_button: See Our Works
+    heading: A Cybersecurity conference focused on building the next generation of Cyber professionals
+    tagline: "BSides Cincinnati is..."
+    primary_button: Register Now
     primary_button_url: portfolio
-    secondary_button: Connect with Us
+    secondary_button: Submit a Talk
     secondary_button_url: contact
   portfolio:
     enable: true
@@ -86,16 +93,13 @@ params:
     social:
       title: Social Media
       link:
-        - name: Medium
+        - name: Twitter
           url: '#'
-        - name: Behance
-          url: '#'
-        - name: Dribbble
+        - name: Email
           url: '#'
         - name: Instagram
           url: '#'
     service:
-      title: 'We help brands:'
+      title: 'We are building the future'
       description: >-
-        develop design solutions<br>produce valuable cultural content<br>create
-        fresh brand experience
+        cultivate the future generation<br>of Cybersecurity professionals<br>through exposure to the best and brightest
