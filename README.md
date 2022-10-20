@@ -20,3 +20,7 @@ aws s3 sync --delete ./public/ s3://bsidescincy-test/
 # This deploys the static files to the s3 bucket, using the convention common to AWS S3 web hosting:
 aws s3 sync --delete ./public/ s3://bsidescincy.org/
 ```
+
+## Update 
+
+Working on migrating site over to Hugo.
