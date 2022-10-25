@@ -1,6 +1,6 @@
 ---
 title: "KIO TAPE"
-date: 2019-12-23T15:44:46+06:00
+year: 2024
 type: portfolio
 image: "images/projects/project-thumb-four.jpg"
 category: ["PRODUCT LABEL"]

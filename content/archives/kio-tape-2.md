@@ -1,9 +1,9 @@
 ---
-title: "SEAMLESS WATCH"
-date: 2019-12-23T15:55:44+06:00
+title: "KIO-TAPE BRAND"
+year: 2023
 type: portfolio
-image: "images/projects/project-thumb-three.jpg"
-category: ["REBRAND"]
+image: "images/projects/project-thumb-four.jpg"
+category: ["PRODUCT LABEL"]
 project_images: ["images/projects/project-details-image-one.jpg", "images/projects/project-details-image-two.jpg"]
 ---
 
@@ -26,3 +26,4 @@ Mystery answer. After entering this mode, the screen initially displays “ask n
 Note: these strings are for the English version of the watch, we will need to use completely different strings in other countries without reprogramming the logic of the watch.
 
 The user may cycle among all modes (date/time, timer, mystery answer) by pressing the mode button.
+

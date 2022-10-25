@@ -23,6 +23,11 @@ hugo server -D
 
 Dimensions / Aspect Ratio: `1922 × 1080`
 
+### Blog Pictures
+
+`image` Dimensions / Aspect Ratio: `4 x 5`
+`feature_image` Dimensions / Aspect Ratio: `16 x 9`
+
 ### CSS Override
 
 The CSS override for the theme is located at `css/override.css`

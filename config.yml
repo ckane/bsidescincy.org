@@ -23,12 +23,12 @@ menu:
     - name: About
       url: about
       weight: 6
-    - name: Get in touch
+    - name: 'Contact Us'
       url: contact
       weight: 7
 params:
   logo: 'images/bsideslogo.png'
-  footerLogo: 'images/bsideslogo.png'
+  footerLogo: 'images/bsideslogo-white.png'
   dateFormat: 26 FEB 1994
   description: BSides Cincinnati
   custom_css: 
@@ -50,7 +50,7 @@ params:
         title: Web Design
   navAction:
     status: true
-    name: Contact Us
+    name: 'Contact Us'
     url: contact
   banner:
     enable: true
@@ -63,43 +63,40 @@ params:
     secondary_button_url: contact
   portfolio:
     enable: true
-    title: OUR RECENT WORKS
+    title: PAST CONFERENCES
     subtitle: Crafting experiences and seeking to make the complex clear & beautiful.
   call_to_action:
     enable: true
     background_image: images/backgrounds/cta-background.jpg
     title: LET’S WORK TOGETHER
-    primary_button: Submit Query
-    primary_button_url: contact
-    secondary_button: Not Convinced
-    secondary_button_url: portfolio
+    primary_button: Become a Sponsor
+    primary_button_url: # TODO
+    secondary_button: Submit a Talk
+    secondary_button_url: # TODO
   footer:
     contactInfo:
       title: Contact Info
-      address: '713 Elmwood St.<br>Prior Lake, MN 55372'
-      phone: 409-896-1444
-      email: info@roxo.co
+      address: '520 Vine St<br>Cincinnati, OH 45202'
+      phone: 513-000-0000
+      email: bsidescincy@gmail.com
     sitemap:
       title: Sitemap
       link:
-        - name: About Company
+        - name: About BSides Cincy
           url: about
-        - name: Projects
-          url: portfolio
-        - name: Blog
-          url: blog
+        - name: Past Conferences
+          url: archives
+        - name: Announcements
+          url: announcements
         - name: Contact
           url: contact
     social:
-      title: Social Media
       link:
-        - name: Twitter
-          url: '#'
-        - name: Email
-          url: '#'
-        - name: Instagram
-          url: '#'
+        - icon: 'fa-twitter'
+          url: 'https://twitter.com/bsidescincy/'
+        - icon: 'fa-envelope'
+          url: 'mailto:bsidescincy@gmail.com'
     service:
       title: 'We are building the future'
       description: >-
-        cultivate the future generation<br>of Cybersecurity professionals<br>through exposure to the best and brightest
+        cultivate the future generation of Cybersecurity professionals through exposure to the best and brightest
