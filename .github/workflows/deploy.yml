@@ -1,34 +1,56 @@
 name: bsidescincy-deploy-actions
 run-name: Deployment action run for ${{ github.ref_name }}
-on: [push]
+
+on: 
+  push:
+    branches: 
+      - 'main'
+      - 'prod'
+      - 'site-redesign'
+
 permissions:
   id-token: write
   contents: read
+
 jobs:
   deploy-site:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout site source
         uses: actions/checkout@v3
-      - name: Set up Node.js v16
-        uses: actions/setup-node@v3
         with:
-          node-version: '16'
-      - name: Install hexo
-        run: npm install -g hexo
-      - name: Install dependencies for website
-        run: npm install
-      - name: Generate static site files in public/
-        run: npm exec hexo generate
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Modify baseURL in config if not prod deploy
+        if: github.ref_name != 'prod'
+        run: sed 's/bsidescincy.org/bsidescincy-test.s3-website.us-east-2.amazonaws.com/g' config.yml > config.yml
+
+      - name: Build hugo site
+        run: hugo --minify
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_BSIDES_ROLE_ARN }}
           role-session-name: GithubDeploy_${{ github.ref_name }}
           aws-region: us-east-2
-      - name: Deploying to staging bucket
-        if: github.ref_name == 'main'
+
+      - name: Deploying to staging bucket (site redesign)
+        if: github.ref_name == 'site-redesign' 
         run: aws s3 sync ./public/ s3://${{ secrets.AWS_BSIDES_STAGING_BUCKET }}/
+
+      - name: Deploying to staging bucket
+        if: github.ref_name == 'main' || github.ref_name == 'site-redesign' 
+        run: aws s3 sync ./public/ s3://${{ secrets.AWS_BSIDES_STAGING_BUCKET }}/
+
       - name: Deploying to prod bucket
         if: github.ref_name == 'prod'
         run: aws s3 sync ./public/ s3://${{ secrets.AWS_BSIDES_PROD_BUCKET }}/

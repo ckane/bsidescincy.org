@@ -1,18 +1,40 @@
-# bsidescincy.org
-BSidesCincy website source
+# BSides Cincy Website - bsidescincy.org
 
-Website is build using the Hexo Framework:
-* https://hexo.io/docs/
+All source for the BSides Cincy website.
 
-More or less how build & deployment work:
+Website is build using the Hugo Framework:
+* https://gohugo.io/
+
+## Getting Started
+
 ```bash
-# This will run a server on http://localhost:4000/ which can give a local preview of the site:
-hexo s
+git submodule update
+```
 
-# This builds the static files from the source socuments in ./public/, after cleaning the folders first
-hexo clean
-hexo gen
+## Development
 
+To develop this website, yo must have the `hugo` CLI installed. Once you do, you can serve the development server using:
+
+```bash
+hugo server -D
+```
+
+### Hero Picture
+
+Dimensions / Aspect Ratio: `1922 × 1080`
+
+### Blog Pictures
+
+`image` Dimensions / Aspect Ratio: `4 x 5`
+`feature_image` Dimensions / Aspect Ratio: `16 x 9`
+
+### CSS Override
+
+The CSS override for the theme is located at `css/override.css`
+
+## Deploymenent
+
+```bash
 # You can deploy the static files to a test S3 bucket that you've created or been granted rights on:
 aws s3 sync --delete ./public/ s3://bsidescincy-test/
 # Then, visit http://bsidescincy-test.s3-website.<region>.amazonaws.com/ to test it in the wild
