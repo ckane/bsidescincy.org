@@ -32,8 +32,11 @@ jobs:
       - name: Modify baseURL in config if not prod deploy
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.baseURL = "https://bsidescincy-test.s3-website.us-east-2.amazonaws.com"' 'config.yml'
+          cmd: yq -i '.baseURL = "https://${{ secrets.AWS_BSIDES_STAGING_BUCKET }}.s3-website.us-east-2.amazonaws.com"' 'config.yml'
         if: github.ref_name == 'main'
+
+      - name: Show the configuration
+        run: cat config.yml
 
       - name: Build hugo site
         run: hugo --minify
