@@ -5,12 +5,12 @@ on:
   push:
     branches: 
       - 'main'
-      - 'prod'
+      # - 'prod'
   pull_request:
 
-# permissions:
-#   id-token: write
-#   contents: read
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   deploy-site:
@@ -29,9 +29,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Modify baseURL in config if not prod deploy
-        if: github.ref_name != 'prod'
-        run: sed 's/bsidescincy.org/bsidescincy-test.s3-website.us-east-2.amazonaws.com/g' config.yml > config.yml
+      # - name: Modify baseURL in config if not prod deploy
+      #   if: github.ref_name != 'prod'
+      #   run: sed 's/bsidescincy.org/bsidescincy-test.s3-website.us-east-2.amazonaws.com/g' config.yml > config.yml
 
       - name: Build hugo site
         run: hugo --minify
