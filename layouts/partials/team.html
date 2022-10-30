@@ -14,13 +14,15 @@
         <div class="col-lg-4 col-md-6">
           <div class="site-team-member">
             <div class="site-team-member-image">
-              <img src="{{ .image | absURL }}" alt="team-member">
+              {{ if .image }}<img src="{{ .image | absURL }}" alt="team-member">
+              {{ else }}<img src="/images/team/generic.jpeg" alt="team-member">
+              {{ end }}
             </div>
             <div class="site-team-member-content">
               <h3 class="text-primary">{{ .name }}</h3>
               <p><span class="text-secondary">aka</span> {{ .designation }}</p>
               <ul class="site-team-member-social">
-                {{ if.twitter }}<li><a href="{{ .twitter | absURL }}"><i class="fa fa-twitter"></i></a></li>{{ end }}
+                {{ if .twitter }}<li><a href="{{ .twitter | absURL }}"><i class="fa fa-twitter"></i></a></li>{{ end }}
                 {{ if .linkedin }}<li><a href="{{ .linkedin | absURL }}"><i class="fa fa-linkedin"></i></a></li>{{ end }}
                 {{ if .website }}<li><a href="{{ .website | absURL }}"><i class="fa fa-rss"></i></a></li>{{ end }}
               </ul>

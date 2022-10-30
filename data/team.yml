@@ -1,30 +1,21 @@
 enable: true
-title: Team that makes the difference.
+title: Meet the team.
 members:
   - name: Dan Bolster
-    designation: botster
-    image: 
-    linkedin: https://www.linkedin.com/
-    twitter: https://twitter.com/
+    designation: rob0tster
+    twitter: https://twitter.com/rob0tster
   - name: Natalie Allen
     designation: _natted_
-    image: 
-    linkedin: https://www.linkedin.com/
-    twitter: https://twitter.com/
+    twitter: https://twitter.com/_natted_
   - name: Nate Fair
     designation: clandestination
-    image: 
-    linkedin: https://www.linkedin.com/
-    twitter: https://twitter.com/
   - name: Nicole Beckwith
     designation: Just Another Nerd
-    image: 
-    linkedin: https://www.linkedin.com/
-    twitter: https://twitter.com/
+    twitter: https://twitter.com/NicoleBeckwith
   - name: Quaid DeLacluyse
     designation: Ezra Buckingham
     image: images/team/quaid-delacluyse.png
-    linkedin: https://www.linkedin.com/
-    twitter: https://twitter.com/
+    linkedin: https://www.linkedin.com/in/quaiddel
+    twitter: https://twitter.com/buckinghamezra
     website: https://ezrabuckingham.com
   

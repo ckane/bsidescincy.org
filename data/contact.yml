@@ -1,13 +1,18 @@
-enable  : true
-contactFormTitle    : CONTACT WITH ME
-contactFormSubtitle : >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ea! consectetur adipisicing elit. Dolore, ea!
-mapTitle    : FIND US
-mapSubtitle : >
-  Si aute quis eu proident o cupidatat ne anim nescius, et est praesentibus, o quorum vidisse expetendis, nostrud eram quibusdam ad nam nostrud ubi.
-officeAddress1 : 125, Kings Street, Melbourne United Kingdom,600562
-officeAddress2 : 925, Lab Street, San Fransisco, United State 90278
-mail1 : support@timer.com
-mail2 : info@timer.com
-phone1: +07 052 245 022
-phone2: +07 052 245 025 
+fabform: 'https://fabform.io/f/USAg2Jl'
+contactInfo:
+  title: Contact Info
+  address: '520 Vine St<br>Cincinnati, OH 45202'
+  phone: 513-000-0000
+  email: bsidescincy@gmail.com
+contactForm:
+  placeholder_first_name: First Name
+  placeholder_last_name: Last Name
+  placeholder_email: Email
+  placeholder_inquiry_type: Inquiry Type
+  placeholder_about_the_inquiry: Your Inquiry
+  send_message: Send Message
+  projectType:
+    - value: gd
+      title: 
+    - value: wd
+      title: Web Design

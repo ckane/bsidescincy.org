@@ -35,19 +35,6 @@ params:
     - "css/override.css"
   author: Ezra Buckingham
   googleAnalitycsID: Your ID
-  fabform: 'https://fabform.io/f/USAg2Jl'
-  contactForm:
-    placeholder_first_name: First Name
-    placeholder_last_name: Last Name
-    placeholder_email: Email
-    placeholder_project_type: Project Type
-    placeholder_about_the_project: About the Project
-    send_message: Send Message
-    projectType:
-      - value: gd
-        title: Graphics Design
-      - value: wd
-        title: Web Design
   navAction:
     status: true
     name: 'Contact Us'
@@ -68,11 +55,11 @@ params:
   call_to_action:
     enable: true
     background_image: images/backgrounds/cta-background.jpg
-    title: LET’S WORK TOGETHER
+    title: "LET'S WORK TOGETHER"
     primary_button: Become a Sponsor
-    primary_button_url: # TODO
+    primary_button_url: 'sponsors' # TODO
     secondary_button: Submit a Talk
-    secondary_button_url: # TODO
+    secondary_button_url: 'registration' # TODO
   footer:
     contactInfo:
       title: Contact Info
@@ -98,5 +85,4 @@ params:
           url: 'mailto:bsidescincy@gmail.com'
     service:
       title: 'We are building the future'
-      description: >-
-        cultivate the future generation of Cybersecurity professionals through exposure to the best and brightest
+      description: cultivate the future generation of Cybersecurity professionals through exposure to the best and brightest

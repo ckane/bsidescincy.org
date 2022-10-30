@@ -34,6 +34,13 @@
     width: auto;
 }
 
+.site-about-content p {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #000000;
+}
+
 @media screen and (max-width: 900px) {
     .list .top-link {
         transform: translateY(-5rem);
