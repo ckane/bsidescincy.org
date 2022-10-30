@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   deploy-site:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
 
       - name: Checkout site source
@@ -26,7 +26,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          # extended: true
+          extended: true
 
       - name: Modify baseURL in config if not prod deploy
         if: github.ref_name != 'prod'
