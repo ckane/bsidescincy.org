@@ -5,3 +5,4 @@ heading       : "Don’t be shy. Say <span>Hello.</span>"
 form_heading  : "WE ARE HERE FOR YOU"
 ---
 
+{{< js_wc >}} 

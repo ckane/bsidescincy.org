@@ -8,6 +8,7 @@ Website is build using the Hugo Framework:
 ## Getting Started
 
 ```bash
+git submodule init
 git submodule update
 ```
 
