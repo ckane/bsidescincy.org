@@ -39,6 +39,7 @@ params:
     status: true
     name: 'Contact Us'
     url: contact
+  
   banner:
     enable: true
     background_image: images/backgrounds/hero-background.jpeg
@@ -48,10 +49,7 @@ params:
     primary_button_url: portfolio
     secondary_button: Submit a Talk
     secondary_button_url: contact
-  portfolio:
-    enable: true
-    title: PAST CONFERENCES
-    subtitle: Crafting experiences and seeking to make the complex clear & beautiful.
+
   call_to_action:
     enable: true
     background_image: images/backgrounds/cta-background.jpg

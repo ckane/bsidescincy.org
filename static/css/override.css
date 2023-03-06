@@ -15,8 +15,10 @@
     width: auto;
 }
 
-#timer h2 {
-    font-style: italic;
+#clock {
+    font-size: 120pt;
+    text-align: center;
+    background-color:gray;
 }
 
 .site-footer-social {
